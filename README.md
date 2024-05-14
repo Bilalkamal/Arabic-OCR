@@ -13,7 +13,7 @@ This project is a simple OCR (Optical Character Recognition) text extractor for 
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/bilalkamal/Arabic_OCR.git
+   git clone https://github.com/bilalkamal/Arabic-OCR.git
    cd Arabic_OCR
    ```
 
