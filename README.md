@@ -50,4 +50,4 @@ python Arabic_OCR.py
 The extracted text will be displayed in the text area.
 
 ## Screenshots
-![App GUI](screenshots/app_gui.png)
+![App GUI](app_gui.png)
