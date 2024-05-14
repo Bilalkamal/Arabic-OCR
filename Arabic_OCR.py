@@ -27,11 +27,17 @@ def upload_file(file_path=None):
 
         text_display.delete(1.0, tk.END)
         text_display.insert(tk.END, extracted_text)
+        copy_to_clipboard(extracted_text)
 
 def drop(event):
     file_path = event.data
     if file_path:
         upload_file(file_path.strip('{}'))
+
+def copy_to_clipboard(text):
+    root.clipboard_clear()
+    root.clipboard_append(text)
+    root.update()  # Keeps the clipboard content even after the application is closed
 
 # Set up the main application window
 root = TkinterDnD.Tk()
@@ -47,7 +53,6 @@ scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
 # Create a text widget to display the extracted text
 text_display = Text(text_frame, wrap=tk.WORD, yscrollcommand=scrollbar.set)
-# Make it right-to-left
 text_display.pack(fill=tk.BOTH, expand=True)
 text_display.tag_configure("right", justify='right')
 scrollbar.config(command=text_display.yview)
